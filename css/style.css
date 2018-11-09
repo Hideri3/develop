@@ -3,9 +3,44 @@ body{
     background-color: #fafafa;
 }
 
+a{
+    color: #043667;
+    font-size: 19px;
+    font-weight: bold;
+}
+
 .container{
-    width: 1010px;
+    width: 1350px;
     margin: 0 auto; /*внешние отступы*/
+}
+
+.button{
+    height: 41px;
+    border-radius: 4.5px;
+    color: #ffffff;
+    text-align: center;
+
+    padding: 10px 37px 10px;
+
+    box-sizing: border-box; /*задаем размеры ящика*/ 
+}
+
+.button.button-empty{
+    padding: 10px;
+}
+
+.button.button-blue{
+    background-color: #3e99ed;
+}
+
+a.button{
+    text-decoration: none;/*Убрать подчеркивание*/
+
+    display: inlain-flex; /*это означает что мы работаем флексами, при 
+    так значений свойста блок не переносится на другую строчку*/ 
+
+    justify-content: center; 
+    align-items: center;/*выравниваем элементы по центру. Это вертикальное выравнивание*/ 
 }
 
 nav{
@@ -22,6 +57,12 @@ nav .container{
     
 }
 
+nav .logo{
+    display: flex; /*это означает что мы работаем флексами*/ 
+    justify-content: space-between; /*это означает, что мы выравниваем содержимое с растоянием между*/
+    align-items: center;/*выравниваем элементы по центру. Это вертикальное выравнивание*/
+}
+
 nav .logo .line {
     width: 1px;
     height: 46px;
@@ -29,12 +70,6 @@ nav .logo .line {
     margin: 0 30px;/*Внешнее растояние*/
   }
   
-
-nav .logo{
-    display: flex; /*это означает что мы работаем флексами*/ 
-    justify-content: space-between; /*это означает, что мы выравниваем содержимое с растоянием между*/
-    align-items: center;/*выравниваем элементы по центру. Это вертикальное выравнивание*/
-}
 
 nav .search input{
 
@@ -44,12 +79,12 @@ nav .search input{
   border: solid 1.5px #d6d6d6;
   
 
-  font-size: 22px; /*размер текста??*/
+  font-size: 22px; /*размер текста*/
   color: #a7a7a7;/*цвет текста*/
 
   box-sizing: border-box;/*Свойсво чтобы инпут не расширялся*/
 
-  background: #fafafa url("../icons/icon.png") no-repeat 15px; /*Задаем задний фон,
+  background: #fafafa url("../icons/icons.png") no-repeat 15px; /*Задаем задний фон,
    добавляем иконку и делаем кол.во. иконок равным 1*/
    padding-left: 40px;
 }
@@ -59,11 +94,122 @@ nav .links ul{
     LINKS в которых содержатся теги ul*/
     display: flex; /*это означает что мы работаем флексами*/ 
     justify-content: space-between; /*это означает, что мы выравниваем содержимое с растоянием между*/
-    padding: 0;
-    margin: 0;
+    padding: 0;/*Внутренний отступ*/
+    margin: 0; /*Внешний отступ*/
 }
 
 nav .links ul li{
     list-style: none;
     margin-left: 45px;
 }
+
+.user_info{
+    margin: 70px auto 60px; /*внешний отступ контейнера*/
+}
+
+.container .user_info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_info .avatar{
+    width: 442px; /*Ширина кнтейнера*/
+    display: flex;
+    align-items: center; /*выравнивание*/
+    justify-content: center;/*растягивание содержимого*/
+}
+
+.user_info .avatar .avatar-background{
+    width: 242px;
+    height: 242px;
+    background-image: linear-gradient(239deg, #d7337c, #d93173 31%, #f79955 58%, #f5a17c);
+
+    border-radius: 100%;
+
+    display: flex;
+    align-items: center; /*выравнивание*/
+    justify-content: center;/*растягивание содержимого*/
+}
+
+.user_info .avatar .avatar-background img{
+  border: solid 6px #ffffff;
+
+  width: 216px;
+  height: 216px;
+  object-fit: contain; /*fit-помещать*/
+
+  border-radius: 100%;
+
+  
+}
+
+.user_info .discription{
+    width: 896px;
+}
+
+.user_info .discription .user{
+    display: flex;
+    align-items: center;
+}
+ 
+.user_info .discription .user .login{
+    font-size: 49px; /*размер шрифта*/
+    margin-right: 35px;
+    font-weight: 100;
+}
+
+.user_info .discription .user .button-follow{
+    margin-right: 10px;
+}
+
+.user_info .discription .user a.button.button-blue{
+    margin-right: 10px;
+    width: 49px;
+    padding: 10px 15px;
+}
+
+.user_info .discription .counter ul {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    margin: 0;
+}
+
+.user_info .discription .counter ul li {
+    list-style: none;
+    font-size: 23px;
+    margin-right: 60px;
+}
+
+.user_info .discription .counter ul li:last-of-type {
+    
+    margin-right: 0px;
+}
+
+.user_info .discription .counter ul span{
+    font-size: 25px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user_info .discription .about {
+    font-size: 23px;
+}
+
+.user_info .discription .about span{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.user_info .discription .about p{
+    display: inline-flex;
+    margin: 0;
+}
+
+.user_info .discription .about a{
+    display: block;  /*Предназначенно для переноса ссылки на другую
+    строчку, выделя этот элемент в блок*/
+    margin-top: 20px;
+}
+

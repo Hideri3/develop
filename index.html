@@ -6,7 +6,8 @@
     <meta name="description" content="Бесплатный интенсив по верстке" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500&amp;subset=cyrillic-ext" rel="stylesheet">
+    <!--подключение шрифтов-->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -36,18 +37,22 @@
             </div>
         </div>    
     </nav>
+    
+<div class="container">  
     <div class="user_info">
         <div class="avatar">
-            <img src="images/avatar.jpg"/> 
+            <div class="avatar-background">
+                <img src="images/avatar.jpg"/>
+            </div> 
         </div>
         <div class="discription">
             <div class="user">
                 <span class="login">Hideri</span>
-                <button class="button button-blue">Подписаться</button>
-                <a class="button button-blue" href="#">
-                    <img src="icons/icon.png"/>
+                <button class="button button-blue button-follow">Подписаться</button>
+                <a class="button button-blue button-menu" href="#">
+                <img src="icons/icon.png">
                 </a>
-                <a href="#">
+                <a class="button button-empty" href="#">
                     <img src="icons/dots.png"/>
                 </a>
             </div>
@@ -71,6 +76,7 @@
             </div>
         </div>
     </div>
+</div>
     <div class="story">
             <ul>
                     <li>
